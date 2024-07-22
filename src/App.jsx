@@ -1,3 +1,4 @@
+// App.jsx
 import React, { useState } from 'react';
 import TodoList from './components/TodoList';
 
@@ -36,8 +37,8 @@ function App() {
   ]);
 
   return (
-    <div className='app'>
-      <h1>Lista de Tarefas</h1>
+    <div className='app max-w-4xl mx-auto p-6'>
+      <h1 className='text-4xl font-extrabold text-gray-900 mb-6'>Lista de Tarefas</h1>
       <TodoList todos={todos} />
     </div>
   );
