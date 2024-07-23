@@ -1,6 +1,7 @@
 // App.jsx
 import React, { useState } from 'react';
 import TodoList from './components/TodoList';
+import './App.css';
 
 function App() {
   const [todos, setTodos] = useState([
@@ -37,7 +38,7 @@ function App() {
   ]);
 
   return (
-    <div className='app max-w-4xl mx-auto p-6'>
+    <div className='app max-w-4xl mx-auto p-6 bg-zinc-200'>
       <h1 className='text-4xl font-extrabold text-gray-900 mb-6'>Lista de Tarefas</h1>
       <TodoList todos={todos} />
     </div>
