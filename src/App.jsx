@@ -38,11 +38,22 @@ function App() {
     },
   ]);
 
+  function addTodo(titulo, categoria) {
+    console.log('titulo: ', titulo, ' categoria: ', categoria);
+    const novoTodos = [...todos, {
+      id: Math.floor(Math.random() * 1000),
+      text: titulo,
+      category: categoria,
+      isCompleted: false,
+    }]
+    setTodos(novoTodos);
+  }
+
   return (
     <div className='app max-w-4xl mx-auto p-6 bg-zinc-200'>
       <h1 className='text-4xl font-extrabold text-gray-900 mb-6'>Lista de Tarefas</h1>
       <TodoList todos={todos} />
-      <TodoForm />
+      <TodoForm addTodo={addTodo} />
     </div>
   );
 }
