@@ -1,6 +1,7 @@
 // App.jsx
 import React, { useState } from 'react';
 import TodoList from './components/TodoList';
+import TodoForm from './components/TodoForm';
 import './App.css';
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
     <div className='app max-w-4xl mx-auto p-6 bg-zinc-200'>
       <h1 className='text-4xl font-extrabold text-gray-900 mb-6'>Lista de Tarefas</h1>
       <TodoList todos={todos} />
+      <TodoForm />
     </div>
   );
 }
