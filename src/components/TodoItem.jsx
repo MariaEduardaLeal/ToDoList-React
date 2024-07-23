@@ -8,12 +8,9 @@ const TodoItem = ({ todo }) => {
         <p className='text-gray-800 text-lg font-semibold'>{todo.text}</p>
         <p className='text-sm text-gray-500'>{todo.category}</p>
       </div>
-      <div className='ml-4'>
-        <input
-          type='checkbox'
-          checked={todo.isCompleted}
-          className='form-checkbox h-5 w-5 text-blue-600'
-        />
+      <div>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">Completar</button>
+        <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-red-700 rounded ml-2">X</button>
       </div>
     </div>
   );
